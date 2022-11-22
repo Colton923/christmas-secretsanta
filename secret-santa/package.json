@@ -20,6 +20,7 @@
     "react-dom": "18.2.0"
   },
   "devDependencies": {
+    "@netlify/plugin-nextjs": "^4.28.4-appdir.0",
     "prettier": "^2.7.1"
   }
 }
