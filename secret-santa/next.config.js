@@ -2,15 +2,6 @@
 const nextConfig = {
   experimental: {
     appDir: true,
-  },
-  redirects: async () => {
-    return [
-      {
-        source: '/:path*',
-        destination: '/index.html',
-        permanent: true,
-      },
-    ];
   }
 }
 
