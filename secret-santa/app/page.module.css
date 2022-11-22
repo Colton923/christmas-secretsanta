@@ -38,6 +38,7 @@
   color: #c54245;
   text-shadow: 5px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
   font-stretch: expanded;
+  justify-content: center;
 }
 
 .titletwo{
@@ -53,6 +54,7 @@
   text-decoration: wavy;
   text-align: center;
   font-stretch: expanded;
+  justify-content: center;
 }
 
 .titlethree{
@@ -66,6 +68,7 @@
   text-shadow: 5px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
   font-stretch: expanded;
   padding: 10px;
+  justify-content: center;
 }
 
 .input {
