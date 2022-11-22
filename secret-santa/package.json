@@ -1,20 +1,21 @@
 {
   "name": "secret-santa",
   "version": "0.1.0",
-  "main": "function.js",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "deploy": "next build"
+    "deploy": "next build && next export"
   },
   "dependencies": {
+    "-": "^0.0.1",
     "firebase": "^9.14.0",
     "firebase-admin": "^11.3.0",
     "firebase-functions": "^4.1.0",
     "firebase-tools": "^11.16.1",
+    "netlify-cli": "^12.2.6",
     "next": "13.0.4",
     "react": "18.2.0",
     "react-dom": "18.2.0"
