@@ -6,9 +6,9 @@ const nextConfig = {
   redirects: async () => {
     return [
       {
-        source: '/*',
-        destination: '/index.html',
-        statusCode: 200,
+        source: '/:path*',
+        destination: '/:path*',
+        permanent: true,
       },
     ];
   }
