@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "merry-christmas-family",
     "public": "public",
     "ignore": [
       "firebase.json",
