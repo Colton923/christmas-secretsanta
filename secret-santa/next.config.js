@@ -8,7 +8,7 @@ const nextConfig = {
       {
         source: '/*',
         destination: '/index.html',
-        status: 200,
+        statusCode: 200,
       },
     ];
   }
