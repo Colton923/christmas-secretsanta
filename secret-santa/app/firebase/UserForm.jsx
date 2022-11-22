@@ -83,7 +83,7 @@ export default class UserForm extends React.Component {
   render() {
     return (
 
-    <div style={{fontFamily: 'Mountains of Christmas'}}>
+    <div style={{fontFamily: 'Mountains of Christmas'}} className={styles.titlebacking}>
       <h1 className={styles.titleone}>Merry Christmas Family!</h1>
       <div>
         <h2 className={styles.titletwo}>Rules</h2>
