@@ -34,7 +34,6 @@ const CheckUser = async (userName) => {
         const availableUsers = data.map((user) => user.userName)
         const availableSanta = availableUsers.filter((user) => !unAvailableSecrets.includes(user) && user !== userName)
         const secret = availableSanta[Math.floor(Math.random() * availableSanta.length)]
-        console.log(availableSanta)
         const santa = userName
         await addDoc(santaRef,{
           santa: userName,
