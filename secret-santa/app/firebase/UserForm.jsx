@@ -18,19 +18,23 @@ const CheckUser = async (userName) => {
     const data = querySnapshot.docs.map(doc => doc.data())
     const foundUser = data.find((user) => user.userName === userName)
 
-
     if (foundUser) {
       const santaRef = collection(db, "santas")
       const santaSnapshot = await getDocs(santaRef)
       const santaData = santaSnapshot.docs.map(doc => doc.data())
       const foundSanta = santaData.find((user) => user.santa === userName)
+
       if (foundSanta) {
         const secret = foundSanta.secret.toString()
         const santa = foundSanta.santa.toString()
 
         alert('Hey ' + santa + '! You already have a person to gift to!')
       } else {
-        const secret = data[Math.floor(Math.random() * data.length)].userName
+        const unAvailableSecrets = santaData.map((user) => user.secret)
+        const availableUsers = data.map((user) => user.userName)
+        const availableSanta = availableUsers.filter((user) => !unAvailableSecrets.includes(user) && user !== userName)
+        const secret = availableSanta[Math.floor(Math.random() * availableSanta.length)]
+        console.log(availableSanta)
         const santa = userName
         await addDoc(santaRef,{
           santa: userName,
