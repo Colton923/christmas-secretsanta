@@ -1,11 +1,10 @@
 'use client'
 import React from "react"
-import { getDocs, collection, doc, addDoc, getDoc } from "firebase/firestore"
+import { getDocs, collection, addDoc } from "firebase/firestore"
 import 'firebase/compat/auth'
 import 'firebase/compat/firestore'
 import { getFirestore } from 'firebase/firestore'
 import { initializeApp } from 'firebase/app'
-import Head from "next/head"
 import styles from '../page.module.css'
 
 const CheckUser = async (userName) => {
@@ -39,7 +38,20 @@ const CheckUser = async (userName) => {
           santa: userName,
           secret: secret
         })
-        alert('Write this down, because you will only see it once! Santa: ' + santa + ' Secret: ' + secret)
+        if (userName === 'Preston Eiler') {
+          alert('Write this down, because you will only see it once! Santa: ' + santa + ' Secret: ' + secret + '. Also you smell like gay.')
+        }
+        if (userName === 'Robin Eiler') {
+          alert('Write this down, because you will only see it once! Santa: ' + santa + ' Secret: ' + secret + '. Love you! -Colton')
+        }
+        if (userName === 'Jessica Spohn') {
+          alert('Write this down, because you will only see it once! Santa: ' + santa + ' Secret: ' + secret + '. Love you bb :) <3 3=D')
+        }
+        if (userName === 'Matthew Nickols') {
+          alert('Write this down, because you will only see it once! Santa: ' + santa + ' Secret: ' + secret, '. Eat balls, faggot.')
+        } else {
+          alert('Write this down, because you will only see it once! Santa: ' + santa + ' Secret: ' + secret)
+        }
       }
     } else {
       alert('User not found')
